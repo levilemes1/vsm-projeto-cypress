@@ -1,0 +1,14 @@
+{
+  "name": "vsm-projeto-cypress",
+  "version": "1.0.0",
+  "description": "Adicionando testes E2E com Cypress no ECM da VSM Informática.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Levi Leme",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.2.0"
+  }
+}
