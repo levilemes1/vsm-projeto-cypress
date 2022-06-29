@@ -1,14 +1,24 @@
 {
-  "name": "vsm-projeto-cypress",
-  "version": "1.0.0",
-  "description": "Adicionando testes E2E com Cypress no ECM da VSM Informática.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Levi Leme",
-  "license": "ISC",
-  "devDependencies": {
-    "cypress": "^10.2.0"
-  }
+    "name": "vsm-projeto-cypress",
+    "version": "1.0.0",
+    "description": "Adicionando testes E2E com Cypress no ECM da VSM Informática.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/levilemes1/vsm-projeto-cypress.git"
+    },
+    "keywords": [
+        "cypress",
+        "cypress-io",
+        "xpath"
+    ],
+    "author": "Levi Leme",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress": "^10.3.0",
+        "cypress-xpath": "^2.0.0"
+    }
 }

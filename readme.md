@@ -1,9 +1,9 @@
 # Adicionando testes E2E com Cypress no ECM da VSM Informática.
+![cypress version](https://img.shields.io/badge/cypress-10.2.0-brightgreen)
 ## Instalando Cypress no Projeto
 
 > Vamos iniciar um novo projeto npm através pela linha de comando. <br>
 > Não vou entrar em detalhes sobre os comandos do npm. <br>
-> Versão atual 10.2.0 do Cypress no momento da instalação. <br>
 
 - Execute 'npm init' para iniciar um novo projeto.
   - Confirme os dados que estiver pedindo no seu terminal.
@@ -19,4 +19,5 @@
 
 <hr>
 
-> Para saber mais sobre Cypress, acesse a [documentação aqui](https://docs.cypress.io/guides/overview/why-cypress)
+> Para saber mais sobre Cypress, acesse a [documentação aqui](https://docs.cypress.io/guides/overview/why-cypress) <br>
+> Caso queira utilizar xpath no projeto, [veja aqui](https://github.com/cypress-io/cypress-xpath)
