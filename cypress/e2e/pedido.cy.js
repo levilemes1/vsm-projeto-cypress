@@ -22,7 +22,7 @@ describe('Acessar o ECM de Homologação da VSM', () => {
     });
 
     it('Acessando minha conta', () => {
-        cy.login(Cypress.env('email'), Cypress.env('senha'))
+        cy.login(Cypress.env('email'), Cypress.env('senha'));
         cy.xpath('//*[@id="minhaContaLabel1"]').should(' Olá, levi ');
     });
 

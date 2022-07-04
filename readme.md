@@ -16,6 +16,22 @@
      1. Scaffold example specs: *"Geraremos vários exemplos de especificações para ajudar a orientá-lo sobre como escrever testes no Cypress."*
      2. Create new empty spec: *"Vamos gerar um arquivo spec vazio que pode ser usado para começar a testar seu aplicativo."*
   5. O diretório onde ficará os arquivos fica em "projeto/cypress/e2e"
+- O arquivo "cypress.config.js" deve ficar da seguinte forma:
+  ```
+    const { defineConfig } = require("cypress");
+
+    module.exports = defineConfig({
+        e2e: {
+            setupNodeEvents(on, config) {
+            // implement node event listeners here
+            },
+        },
+        env: {
+            email: 'SEU USUARIO',
+            senha: 'SUA SENHA'
+        },
+    });
+  ```
 
 <hr>
 
