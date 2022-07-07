@@ -5,7 +5,7 @@ Cypress.Commands.add('login', (email, senha) => {
     cy.xpath('//*[@id="senha"]').type(senha, { log: false });
     cy.xpath('//*[@id="btnLogIn"]').click();
     cy.xpath('//*[@id="minhaContaLabel1"]').should('contain', 'Olá, levi');
-})
+});
 
 Cypress.Commands.add('addProdCarrinho', (nomeProd, fabricanteProd) => {
     cy.xpath('//*[@id="inputPesquisar"]').type(nomeProd);
@@ -13,7 +13,7 @@ Cypress.Commands.add('addProdCarrinho', (nomeProd, fabricanteProd) => {
     cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', nomeProd);
     cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', fabricanteProd);
     cy.xpath('//*[@id="btnAdicionarCarrinhoControls"]').click();
-})
+});
 
 Cypress.Commands.add('checkout', (formaPagamento, totalCarrinho) => {
     cy.xpath('//*[@id="btnFinalizarVendaCart"]').click();
@@ -26,7 +26,7 @@ Cypress.Commands.add('checkout', (formaPagamento, totalCarrinho) => {
     cy.xpath('//*[@id="pedidoTotal"]').should('contain', totalCarrinho);
     cy.xpath('//*[@id="confirmarPedido"]/span[1]').should('contain', 'Confirmar Pedido');
     cy.xpath('//*[@id="confirmarPedido"]').click();
-})
+});
 
 Cypress.Commands.add('iframe', { prevSubject: 'element' }, $iframe => {
     return new Cypress.Promise(resolve => {

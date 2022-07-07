@@ -7,5 +7,5 @@ describe('Acessar o ECM de homologação da VSM e realizar um pedido', () => {
         cy.addProdCarrinho('BUSCOPAN 10MG GTS 20ML', 'BOEHRINGER INGELHEIM DO BRASIL QUÍMICA E FARMACÊUTICA LTDA');
         cy.checkout('Boleto', 'R$ 14,11');
         cy.xpath('//*[@id="scrollAfterFinishHorizontal"]/h2').should('Parabéns! Seu pedido foi concluído com sucesso.');
-    })
+    });
 })
