@@ -25,8 +25,6 @@ Cypress.Commands.add('checkout', (formaPagamento, totalCarrinho) => {
     cy.xpath('//*[@id="mat-tab-label-3-0"]/div').should('contain', formaPagamento);
     cy.xpath('//*[@id="cdk-step-content-0-3"]/span/div[1]/div/h3').should('contain', 'Pedido');
     cy.xpath('//*[@id="pedidoTotal"]').should('contain', totalCarrinho);
-    cy.xpath('//*[@id="confirmarPedido"]/span[1]').should('contain', 'Confirmar Pedido');
-    cy.xpath('//*[@id="confirmarPedido"]').click();
 });
 
 Cypress.Commands.add('aguardarLoad', { prevSubject: 'element' }, $aguardarLoad => {

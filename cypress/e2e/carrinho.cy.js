@@ -25,20 +25,20 @@ describe('Adicionando produtos no carrinho', () => {
                     btnAdicionarCarrinho = '//*[@id="btnAdicionarCarrinhoControlsSpan"]'
                 }
 
-                cy.xpath(inputPesquisar).type('buscopan');
+                cy.xpath(inputPesquisar).type('Cabo iPhone com entrada');
                 cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').click();
-                cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', 'BUSCOPAN 10MG GTS 20ML');
-                cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', 'BOEHRINGER INGELHEIM DO BRASIL QUÍMICA E FARMACÊUTICA LTDA.');
+                cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', 'Cabo iPhone com entrada Usb 2.0 - 1 Metro Firebee');
+                cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', 'FIREBEE');
                 cy.xpath(btnAdicionarCarrinho).click();
             });
         });
     });
 
     it('Adicionar um produto tarjado', () => {
-        cy.xpath('//*[@id="inputPesquisar"]').type('ABLOK 50MG C/30 COMP');
+        cy.xpath('//*[@id="inputPesquisar"]').type('Trilux 032 Media');
         cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').click();
-        cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', 'ABLOK  50MG C/30 COMP');
-        cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', 'BIOLAB SANUS FARMACÊUTICA LTDA');
+        cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', 'Caneta Esferografica Trilux 032 Media - Azul');
+        cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', 'FABER CASTELL');
         cy.xpath('//*[@id="btnAdicionarCarrinhoControls"]').click();
     });
 })

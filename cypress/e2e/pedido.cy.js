@@ -6,8 +6,7 @@ describe('Acessar o ECM da VSM e realizar um pedido', () => {
         cy.clearCookies();
         cy.xpath('//*[@id="btnAceitarCookie"]').click();
         cy.login(usuarios.email, usuarios.senha);
-        cy.addProdCarrinho('BUSCOPAN 10MG GTS 20ML', 'BOEHRINGER INGELHEIM DO BRASIL QUÍMICA E FARMACÊUTICA LTDA');
-        cy.checkout('Boleto', 'R$ 14,11');
-        cy.xpath('//*[@id="scrollAfterFinishHorizontal"]/h2').should('Parabéns! Seu pedido foi concluído com sucesso.');
+        cy.addProdCarrinho('Cabo iPhone com entrada', 'FIREBEE');
+        cy.checkout('Boleto', 'R$ 7,50');
     });
 })
