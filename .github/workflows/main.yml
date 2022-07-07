@@ -1,18 +1,14 @@
 name: Cypress Test CI
-on:
-    push:
-        branches:
-            - "main"
-    pull_request:
+
+on: [push]
+
 jobs:
     cypress-run:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v2
-            # Install NPM dependencies, cache them correctly
-            # and run all Cypress tests
             - name: Cypress run
               uses: cypress-io/github-action@v4
               with:
-                  start: npm cypress run --record --key 71f952ed-bbe6-4760-aeae-90d363152945
+                  start: npx cypress run --record --key 71f952ed-bbe6-4760-aeae-90d363152945
