@@ -1,5 +1,6 @@
 # Adicionando testes E2E com Cypress no ECM da VSM Informática.
 ![cypress version](https://img.shields.io/badge/cypress-10.3.0-brightgreen)
+[![vsm-projeto-cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/7wm1ei&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/7wm1ei/runs)
 ## Instalando Cypress no Projeto
 
 > Vamos iniciar um novo projeto npm através pela linha de comando. <br>
