@@ -4,3 +4,5 @@ cypress/downloads/
 cypress/fixtures/usuarios.json
 cypress/screenshots/
 cypress/videos/
+
+cypress.config.js

@@ -34,11 +34,11 @@ describe('Adicionando produtos no carrinho', () => {
         });
     });
 
-    it('Adicionar um produto tarjado', () => {
-        cy.xpath('//*[@id="inputPesquisar"]').type('Trilux 032 Media');
+    it('Adicionar outro produto - não testar em outras resoluções', () => {
+        cy.xpath('//*[@id="inputPesquisar"]').type('Caneta Marcadora Stabilo');
         cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').click();
-        cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', 'Caneta Esferografica Trilux 032 Media - Azul');
-        cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', 'FABER CASTELL');
+        cy.xpath('//*[@id="app"]/app-pages/mat-sidenav-container/mat-sidenav-content/div/app-product/div[1]/div[2]/app-product-header/div/h2').should('contain', 'Caneta Marcadora Stabilo Para Brincos Ponta Fina');
+        cy.xpath('//*[@id="fabricanteProduto"]/a').should('contain', 'STABILO');
         cy.xpath('//*[@id="btnAdicionarCarrinhoControls"]').click();
     });
 })
