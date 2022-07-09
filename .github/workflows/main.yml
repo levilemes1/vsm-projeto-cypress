@@ -11,4 +11,4 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v4
               with:
-                  start: npx cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
+                  start: npm cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
