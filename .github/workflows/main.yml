@@ -15,6 +15,7 @@ jobs:
               with:
                   build: npm run build
                   start: npm start
-                  # install-command: npm install cypress --save-dev, npm install -D cypress-xpath
-                  # command: ls
-                  # start: npx cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
+                  record: true
+              ENV:
+                  CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
