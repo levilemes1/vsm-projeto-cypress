@@ -12,4 +12,5 @@ jobs:
               uses: cypress-io/github-action@v4
               with:
                   install-command: npm install cypress --save-dev, npm install -D cypress-xpath
+                  run: ls
                   start: npx cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
