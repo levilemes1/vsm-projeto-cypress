@@ -1,4 +1,4 @@
-name: Cypress Test CI
+name: Cypress Tests
 
 on: [push]
 
@@ -8,9 +8,13 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
+            # Install NPM dependencies, cache them correctly
+            # and run all Cypress tests
             - name: Cypress run
               uses: cypress-io/github-action@v4
               with:
-                  install-command: npm install cypress --save-dev, npm install -D cypress-xpath
-                  run: ls
-                  start: npx cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
+                  build: npm run build
+                  start: npm start
+                  # install-command: npm install cypress --save-dev, npm install -D cypress-xpath
+                  # command: ls
+                  # start: npx cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
