@@ -5,10 +5,13 @@ on: [push]
 jobs:
     cypress-run:
         runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
-            - name: Cypress run
-              uses: cypress-io/github-action@v4
-              with:
-                  start: npm cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
+            steps:
+                - name: Checkout
+                  uses: actions/checkout@v2
+                - name: Cypress run
+                  uses: cypress-io/github-action@v4
+                    with:
+                        build: npm i
+                        build: npm i cypress --save-dev
+                        build: npm install -D cypress-xpath
+                        start: npx cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
