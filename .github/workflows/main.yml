@@ -11,7 +11,5 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v4
               with:
-                install-command: npm i
-                install-command: npm i cypress --save-dev
-                install-command: npm install -D cypress-xpath
-                command: npm cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
+                  install-command: npm i, npm i cypress --save-dev, npm install -D cypress-xpath
+                  command: npm cypress run --record --key c0911386-20a9-47be-bd48-bfd0b0133258
