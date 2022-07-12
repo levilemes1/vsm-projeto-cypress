@@ -4,7 +4,7 @@
     "description": "Adicionando testes E2E com Cypress no ECM da VSM Informática.",
     "main": "index.js",
     "scripts": {
-        "cy:run": "cypress run"
+        "start": "npx cypress run"
     },
     "repository": {
         "type": "git",
