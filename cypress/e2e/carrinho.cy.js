@@ -6,8 +6,11 @@ describe('Adicionando produtos no carrinho', () => {
     beforeEach(() => {
         cy.visit('/');
 
-        cy.intercept('GET', '**/configs').as('newConfigs');
-        cy.wait('@newConfigs').its('response.statusCode').should('eq', 200);
+        cy.intercept({ url: 'https://www.vsmshop.com.br/**' }).as('newUrl');
+        cy.wait('@newUrl');
+
+        cy.clearCookies();
+        cy.clearLocalStorage()
 
         cy.xpath('//*[@id="cdk-overlay-0"]/mat-bottom-sheet-container/app-alert-cookie-privacidade/div/h3').should('have.text', ' Atualizamos nossa política de cookies ');
         cy.xpath('//*[@id="btnAceitarCookie"]').click();
@@ -30,8 +33,8 @@ describe('Adicionando produtos no carrinho', () => {
                 }
 
                 cy.xpath(inputPesquisar).type('Cabo iPhone com entrada');
-                cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').should('have.text', ' Cabo iPhone com entrada Usb 2.0 - 1 Metro Firebee  FIREBEE')
-                cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').click();
+                cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').should('have.text', ' Cabo iPhone com entrada Usb 2.0 - 1 Metro Firebee  FIREBEE')
+                cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').click();
 
                 cy.intercept('GET', '**/produto/sku/id/**').as('newProdutoSku');
                 cy.wait('@newProdutoSku').its('response.statusCode').should('eq', 200);
@@ -46,8 +49,8 @@ describe('Adicionando produtos no carrinho', () => {
 
     it('Adicionar outro produto - não testar em outras resoluções', () => {
         cy.xpath(inputPesquisar).type('Caneta Marcadora Stabilo');
-        cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').should('have.text', ' Caneta Marcadora Stabilo Para Brincos Ponta Fina STABILO')
-        cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option[1]').click();
+        cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').should('have.text', ' Caneta Marcadora Stabilo Para Brincos Ponta Fina STABILO')
+        cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').click();
 
         cy.intercept('GET', '**/produto/sku/id/**').as('newProdutoSku');
         cy.wait('@newProdutoSku').its('response.statusCode').should('eq', 200);

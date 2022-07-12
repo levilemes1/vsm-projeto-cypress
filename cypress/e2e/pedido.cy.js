@@ -4,19 +4,16 @@ describe('Acessar o ECM da VSM e realizar um pedido', () => {
     it('Realizando um pedido até o checkout', () => {
         cy.visit('/');
 
-        cy.intercept('GET', '**/configs').as('newConfigs');
-        cy.wait('@newConfigs').its('response.statusCode').should('eq', 200);
+        cy.intercept({ url: 'https://www.vsmshop.com.br/**' }).as('newUrl');
+        cy.wait('@newUrl');
 
         cy.xpath('//*[@id="cdk-overlay-0"]/mat-bottom-sheet-container/app-alert-cookie-privacidade/div/h3').should('have.text', ' Atualizamos nossa política de cookies ');
         cy.xpath('//*[@id="btnAceitarCookie"]').click();
 
         cy.login(usuarios.nome, usuarios.email, usuarios.senha);
 
-        cy.addProdCarrinho('Cabo iPhone com entrada', 'FIREBEE');
+        cy.addProdCarrinho('Filtro De Linha Ipec 7 Tomadas', 'IPEC');
 
-        cy.intercept('GET', '**/configs').as('newConfigs');
-        cy.wait('@newConfigs').its('response.statusCode').should('eq', 200);
-
-        cy.checkout('Boleto', 'R$ 7,50');
+        cy.checkout('Boleto', 'R$ 54,90');
     });
 })
