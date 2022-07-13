@@ -6,6 +6,6 @@ module.exports = defineConfig({
         setupNodeEvents(on, config) {
         // implement node event listeners here
         },
-        baseUrl: "https://www.vsmshop.com.br",
+        baseUrl: "http://loja.7waytech.com.br",
     },
 });

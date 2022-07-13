@@ -1,3 +1,8 @@
+Cypress.Commands.add('interceptNewUrl', () => {
+    cy.intercept({ url: 'http://loja.7waytech.com.br/**' }).as('newUrl');
+    cy.wait('@newUrl');
+});
+
 Cypress.Commands.add('login', (nome, email, senha) => {
     cy.xpath('/html/body/app-root/div[1]/app-pages/mat-sidenav-container/mat-sidenav-content/mat-toolbar/mat-toolbar-row[1]/div[3]/app-top-menu/div/a').click();
     cy.xpath('/html/body/app-root/div[1]/div/div[2]/div/div/div/a[1]').click();
