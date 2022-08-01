@@ -7,7 +7,7 @@ describe('Adicionando produtos no carrinho', () => {
         cy.visit('/');
         cy.interceptNewUrl();
         cy.clearCookies();
-        cy.clearLocalStorage()
+        cy.clearLocalStorage();
 
         cy.xpath('//*[@id="cdk-overlay-0"]/mat-bottom-sheet-container/app-alert-cookie-privacidade/div/h3').should('have.text', ' Atualizamos nossa política de cookies ');
         cy.xpath('//*[@id="btnAceitarCookie"]').click();
@@ -26,7 +26,7 @@ describe('Adicionando produtos no carrinho', () => {
                 } else {
                     cy.viewport(newResolucao.resolucao);
                     inputPesquisar = '//*[@id="inputPesquisarMobile"]';
-                    btnAdicionarCarrinho = '//*[@id="btnAdicionarCarrinhoControlsSpan"]'
+                    btnAdicionarCarrinho = '//*[@id="btnAdicionarCarrinhoControlsSpan"]';
                 }
 
                 cy.xpath(inputPesquisar).type('ABLOK 50MG C/30 COMP');

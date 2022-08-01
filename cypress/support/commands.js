@@ -20,7 +20,7 @@ Cypress.Commands.add('login', (nome, email, senha) => {
 
 Cypress.Commands.add('addProdCarrinho', (nomeProd, fabricanteProd) => {
     cy.xpath('//*[@id="inputPesquisar"]').type(nomeProd);
-    cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').should('contain', nomeProd)
+    cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').should('contain', nomeProd);
     cy.xpath('/html/body/app-root/div[1]/div/div/div/div/mat-option/span/div/span').click();
 
     cy.intercept('GET', '**/produto/sku/id/**').as('newProdutoSku');
