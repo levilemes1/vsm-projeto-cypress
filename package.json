@@ -20,7 +20,7 @@
     "author": "Levi Leme",
     "license": "ISC",
     "devDependencies": {
-        "cypress": "^10.3.0",
+        "cypress": "^10.4.0",
         "cypress-xpath": "^2.0.0"
     }
 }
